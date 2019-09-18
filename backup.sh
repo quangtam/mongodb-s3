@@ -45,7 +45,7 @@ if $BACKUP_FULL_DB; then
    mongodump --host $DB_HOST --port $DB_PORT --archive=$DEST/$BACKUP_FILE --gzip -d $DB_NAME
 else
    #TODO: Backup all DB
-   BACKUP_FILE=BACKUP_FULL_FILE
+   BACKUP_FILE=$BACKUP_FULL_FILE
    mongodump --host $DB_HOST --port $DB_PORT --archive=$DEST/$BACKUP_FILE --gzip
 fi
 
